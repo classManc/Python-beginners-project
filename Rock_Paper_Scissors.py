@@ -9,6 +9,7 @@ while break_out:
         #Asks the player for the number of rounds.
         #input must be of only integer types greater than zero.
         rounds = int(input('How many rounds will you like to play? '))
+        assert rounds > 0, print('invalid value for rounds')
     #Handles a possible error that might occur incase an invalid number is entered by the player.
     except:
         print('invalid value for rounds')
@@ -41,7 +42,6 @@ while break_out:
                     print(result)
                     print(Player1_score)
                     print(Player2_score)
-    finally:
         if Player1_score > Player2_score:
              print('\nPlayer1 wins the game')
         elif Player2_score > Player1_score:
